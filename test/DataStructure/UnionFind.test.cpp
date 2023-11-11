@@ -1,7 +1,7 @@
 #define PROBLEM https:// judge.yosupo.jp/problem/unionfind
 
 #include <iostream>
-#include "../../src/DataStructure/Unionfind.hpp"
+#include "../../src/DataStructure/UnionFind.hpp"
 
 int main() {
     int N, Q;
