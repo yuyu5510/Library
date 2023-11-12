@@ -13,8 +13,8 @@ struct Edge {
     Edge(int to, T cost = 1) : _to(to), _cost(cost) {}
     int to() { return _to; }
     T cost() { return _cost; }
-    void change_cost(const T& val) { *this._cost = val; }
-    void change_to(const int& val) { *this._to = val; }
+    void change_cost(const T& val) { _cost = val; }
+    void change_to(const int& val) { _to = val; }
 
    private:
     int _to;
