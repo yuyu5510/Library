@@ -1,3 +1,8 @@
+---
+title: Segment Tree
+documentation_of: ./src/DataStructure/SegTree.hpp
+---
+
 # segment tree
 
 モノイドであるものに対し使用できるデータ構造です。\
