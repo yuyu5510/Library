@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: src/Graph/Graph.hpp
     title: Graph
-  _extendedRequiredBy:
-  - icon: ':warning:'
-    path: test/Graph/dijkstra_Shortest_Path.cpp
-    title: test/Graph/dijkstra_Shortest_Path.cpp
-  _extendedVerifiedWith: []
+  _extendedRequiredBy: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: test/Graph/dijkstra_Shortest_Path.test.cpp
+    title: test/Graph/dijkstra_Shortest_Path.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/Graph/dijkstra.hpp\"\n\n#include <cassert>\n#include\
@@ -20,19 +20,19 @@ data:
     \n\nnamespace lib {\ntemplate <class T>\nstruct Edge {\n   public:\n    Edge()\
     \ : _to(-1), _cost(0) {}\n    Edge(int to, T cost = 1) : _to(to), _cost(cost)\
     \ {}\n    int to() { return _to; }\n    T cost() { return _cost; }\n    void change_cost(const\
-    \ T& val) { *this._cost = val; }\n    void change_to(const int& val) { *this._to\
-    \ = val; }\n\n   private:\n    int _to;\n    T _cost;\n};\n\ntemplate <class T\
-    \ = long long>\nclass Graph {\n   public:\n    Graph(int N) : N(N), G(N) {}\n\
-    \    void add_edge(int u, int v, T cost = 1) {\n        assert(0 <= u && u < N);\n\
-    \        assert(0 <= v && v < N);\n        G[u].push_back(Edge<T>(v, cost));\n\
-    \        return;\n    }\n\n    void erase_edge(int u, int idx) {\n        assert(0\
-    \ <= u && u < N);\n        assert(0 <= idx && idx < (int)G[u].size());\n     \
-    \   swap_edge(G[u][idx], G[u].back());\n        G[u].pop_back();\n        return;\n\
-    \    }\n\n    void erase_edge_vertex(int u, int v) {\n        assert(0 <= u &&\
-    \ u < N);\n        assert(0 <= v && v < N);\n        int last = (int)(G[u].size()\
-    \ - 1);\n        for (int i = 0; i < (int)(G[u].size()); i++) {\n            if\
-    \ (i > last) {\n                break;\n            }\n            if (G[u][i].to()\
-    \ == v) {\n                swap_edge(G[u][i], G[u][last]);\n                last--;\n\
+    \ T& val) { _cost = val; }\n    void change_to(const int& val) { _to = val; }\n\
+    \n   private:\n    int _to;\n    T _cost;\n};\n\ntemplate <class T = long long>\n\
+    class Graph {\n   public:\n    Graph(int N) : N(N), G(N) {}\n    void add_edge(int\
+    \ u, int v, T cost = 1) {\n        assert(0 <= u && u < N);\n        assert(0\
+    \ <= v && v < N);\n        G[u].push_back(Edge<T>(v, cost));\n        return;\n\
+    \    }\n\n    void erase_edge(int u, int idx) {\n        assert(0 <= u && u <\
+    \ N);\n        assert(0 <= idx && idx < (int)G[u].size());\n        swap_edge(G[u][idx],\
+    \ G[u].back());\n        G[u].pop_back();\n        return;\n    }\n\n    void\
+    \ erase_edge_vertex(int u, int v) {\n        assert(0 <= u && u < N);\n      \
+    \  assert(0 <= v && v < N);\n        int last = (int)(G[u].size() - 1);\n    \
+    \    for (int i = 0; i < (int)(G[u].size()); i++) {\n            if (i > last)\
+    \ {\n                break;\n            }\n            if (G[u][i].to() == v)\
+    \ {\n                swap_edge(G[u][i], G[u][last]);\n                last--;\n\
     \            }\n        }\n\n        for (int i = last; i < (int)(G[u].size());\
     \ i++) {\n            G[u][i].pop_back();\n        }\n        return;\n    }\n\
     \n    const std::vector<Edge<T>>& operator[](int i) const {\n        assert(0\
@@ -80,11 +80,11 @@ data:
   - src/Graph/Graph.hpp
   isVerificationFile: false
   path: src/Graph/dijkstra.hpp
-  requiredBy:
-  - test/Graph/dijkstra_Shortest_Path.cpp
-  timestamp: '2023-11-12 23:58:09+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  requiredBy: []
+  timestamp: '2023-11-13 00:21:55+09:00'
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - test/Graph/dijkstra_Shortest_Path.test.cpp
 documentation_of: src/Graph/dijkstra.hpp
 layout: document
 title: dijkstra

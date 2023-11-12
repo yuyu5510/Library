@@ -17,10 +17,10 @@ data:
       title: UnionFind
   - name: src/Graph
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: src/Graph/Graph.hpp
       title: Graph
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: src/Graph/dijkstra.hpp
       title: dijkstra
   - name: src/Matrix
@@ -33,11 +33,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: src/Modint/StaticModint.hpp
       title: src/Modint/StaticModint.hpp
-  - name: test/Graph
-    pages:
-    - icon: ':warning:'
-      path: test/Graph/dijkstra_Shortest_Path.cpp
-      title: test/Graph/dijkstra_Shortest_Path.cpp
   verificationCategories:
   - name: test/DataStructure
     pages:
@@ -53,5 +48,20 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/DataStructure/UnionFind_unionfind.test.cpp
       title: test/DataStructure/UnionFind_unionfind.test.cpp
+  - name: test/Graph
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/Graph/dijkstra_Shortest_Path.test.cpp
+      title: test/Graph/dijkstra_Shortest_Path.test.cpp
 layout: toppage
 ---
+[![Actions Status](https://github.com/yuyu5510/Library/workflows/verify/badge.svg)](https://github.com/yuyu5510/Library/actions) 
+ [![](https://img.shields.io/badge/license-MIT_License-blue.svg)](https://github.com/yuyu5510/Library/blob/main/LICENSE)
+[![yuyu5510](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Fyuyu5510)](https://atcoder.jp/users/yuyu5510)
+[![yuyu5510](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fcodeforces%2Fjson%2Fyuyu5510)](https://codeforces.com/profile/yuyu5510)
+
+このライブラリは競技プログラミングで使用することを目的として作成されています。
+
+`g++/c++17` で動作することが確認されています。
+
+バグや誤り、改善案がある場合は [issue](https://github.com/yuyu5510/Library/issues/new) にお願いします。

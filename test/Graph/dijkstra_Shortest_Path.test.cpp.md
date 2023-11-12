@@ -1,21 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: src/Graph/Graph.hpp
     title: Graph
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: src/Graph/dijkstra.hpp
     title: dijkstra
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/shortest_path
     links:
     - https://judge.yosupo.jp/problem/shortest_path
-  bundledCode: "#line 1 \"test/Graph/dijkstra_Shortest_Path.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"test/Graph/dijkstra_Shortest_Path.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/shortest_path\"\n\n#include <iostream>\n#include\
     \ <vector>\n\n#line 2 \"src/Graph/dijkstra.hpp\"\n\n#include <cassert>\n#include\
     \ <limits>\n#include <queue>\n#line 7 \"src/Graph/dijkstra.hpp\"\n\n#line 2 \"\
@@ -23,19 +25,19 @@ data:
     template <class T>\nstruct Edge {\n   public:\n    Edge() : _to(-1), _cost(0)\
     \ {}\n    Edge(int to, T cost = 1) : _to(to), _cost(cost) {}\n    int to() { return\
     \ _to; }\n    T cost() { return _cost; }\n    void change_cost(const T& val) {\
-    \ *this._cost = val; }\n    void change_to(const int& val) { *this._to = val;\
-    \ }\n\n   private:\n    int _to;\n    T _cost;\n};\n\ntemplate <class T = long\
-    \ long>\nclass Graph {\n   public:\n    Graph(int N) : N(N), G(N) {}\n    void\
-    \ add_edge(int u, int v, T cost = 1) {\n        assert(0 <= u && u < N);\n   \
-    \     assert(0 <= v && v < N);\n        G[u].push_back(Edge<T>(v, cost));\n  \
-    \      return;\n    }\n\n    void erase_edge(int u, int idx) {\n        assert(0\
-    \ <= u && u < N);\n        assert(0 <= idx && idx < (int)G[u].size());\n     \
-    \   swap_edge(G[u][idx], G[u].back());\n        G[u].pop_back();\n        return;\n\
-    \    }\n\n    void erase_edge_vertex(int u, int v) {\n        assert(0 <= u &&\
-    \ u < N);\n        assert(0 <= v && v < N);\n        int last = (int)(G[u].size()\
-    \ - 1);\n        for (int i = 0; i < (int)(G[u].size()); i++) {\n            if\
-    \ (i > last) {\n                break;\n            }\n            if (G[u][i].to()\
-    \ == v) {\n                swap_edge(G[u][i], G[u][last]);\n                last--;\n\
+    \ _cost = val; }\n    void change_to(const int& val) { _to = val; }\n\n   private:\n\
+    \    int _to;\n    T _cost;\n};\n\ntemplate <class T = long long>\nclass Graph\
+    \ {\n   public:\n    Graph(int N) : N(N), G(N) {}\n    void add_edge(int u, int\
+    \ v, T cost = 1) {\n        assert(0 <= u && u < N);\n        assert(0 <= v &&\
+    \ v < N);\n        G[u].push_back(Edge<T>(v, cost));\n        return;\n    }\n\
+    \n    void erase_edge(int u, int idx) {\n        assert(0 <= u && u < N);\n  \
+    \      assert(0 <= idx && idx < (int)G[u].size());\n        swap_edge(G[u][idx],\
+    \ G[u].back());\n        G[u].pop_back();\n        return;\n    }\n\n    void\
+    \ erase_edge_vertex(int u, int v) {\n        assert(0 <= u && u < N);\n      \
+    \  assert(0 <= v && v < N);\n        int last = (int)(G[u].size() - 1);\n    \
+    \    for (int i = 0; i < (int)(G[u].size()); i++) {\n            if (i > last)\
+    \ {\n                break;\n            }\n            if (G[u][i].to() == v)\
+    \ {\n                swap_edge(G[u][i], G[u][last]);\n                last--;\n\
     \            }\n        }\n\n        for (int i = last; i < (int)(G[u].size());\
     \ i++) {\n            G[u][i].pop_back();\n        }\n        return;\n    }\n\
     \n    const std::vector<Edge<T>>& operator[](int i) const {\n        assert(0\
@@ -60,8 +62,8 @@ data:
     \ {\n                dist[edge.to()].first = dist[vertex].first + edge.cost();\n\
     \                dist[edge.to()].second = vertex;\n                que.push(std::make_pair(dist[edge.to()].first,\
     \ edge.to()));\n            }\n        }\n    }\n\n    return dist;\n}\n}  //\
-    \ namespace lib\n#line 7 \"test/Graph/dijkstra_Shortest_Path.cpp\"\n\nint main()\
-    \ {\n    int N, M, s, t;\n    std::cin >> N >> M >> s >> t;\n    lib::Graph<long\
+    \ namespace lib\n#line 7 \"test/Graph/dijkstra_Shortest_Path.test.cpp\"\n\nint\
+    \ main() {\n    int N, M, s, t;\n    std::cin >> N >> M >> s >> t;\n    lib::Graph<long\
     \ long> G(N);\n\n    for (int i = 0; i < M; i++) {\n        int a, b;\n      \
     \  long long c;\n        std::cin >> a >> b >> c;\n        G.add_edge(a, b, c);\n\
     \    }\n\n    auto dist = lib::dijkstra(s, G);\n    std::vector<int> path;\n \
@@ -86,16 +88,16 @@ data:
   dependsOn:
   - src/Graph/dijkstra.hpp
   - src/Graph/Graph.hpp
-  isVerificationFile: false
-  path: test/Graph/dijkstra_Shortest_Path.cpp
+  isVerificationFile: true
+  path: test/Graph/dijkstra_Shortest_Path.test.cpp
   requiredBy: []
-  timestamp: '2023-11-12 23:58:09+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
+  timestamp: '2023-11-13 00:21:55+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/Graph/dijkstra_Shortest_Path.cpp
+documentation_of: test/Graph/dijkstra_Shortest_Path.test.cpp
 layout: document
 redirect_from:
-- /library/test/Graph/dijkstra_Shortest_Path.cpp
-- /library/test/Graph/dijkstra_Shortest_Path.cpp.html
-title: test/Graph/dijkstra_Shortest_Path.cpp
+- /verify/test/Graph/dijkstra_Shortest_Path.test.cpp
+- /verify/test/Graph/dijkstra_Shortest_Path.test.cpp.html
+title: test/Graph/dijkstra_Shortest_Path.test.cpp
 ---
