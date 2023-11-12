@@ -23,6 +23,11 @@ data:
     - icon: ':warning:'
       path: src/Graph/dijkstra.hpp
       title: dijkstra
+  - name: src/Matrix
+    pages:
+    - icon: ':warning:'
+      path: src/Matrix/Matrix.hpp
+      title: src/Matrix/Matrix.hpp
   - name: src/Modint
     pages:
     - icon: ':heavy_check_mark:'
