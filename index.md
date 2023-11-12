@@ -4,6 +4,9 @@ data:
   - name: src/DataStructure
     pages:
     - icon: ':heavy_check_mark:'
+      path: src/DataStructure/BIT.hpp
+      title: BIT
+    - icon: ':heavy_check_mark:'
       path: src/DataStructure/LazySegTree.hpp
       title: Lazy Segment Tree
     - icon: ':heavy_check_mark:'
@@ -20,6 +23,9 @@ data:
   verificationCategories:
   - name: test/DataStructure
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/DataStructure/BIT_Point_Add_Range_Sum.test.cpp
+      title: test/DataStructure/BIT_Point_Add_Range_Sum.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/DataStructure/LazySegTree_Range_Affine_Range_Sum.test.cpp
       title: test/DataStructure/LazySegTree_Range_Affine_Range_Sum.test.cpp
