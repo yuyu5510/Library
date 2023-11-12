@@ -1,3 +1,8 @@
+---
+title: UnionFind
+documentation_of: ../../src/DataStructure/UnionFind.hpp
+---
+
 # UnionFind
 連結性の判定に使うデータ構造です。
 
