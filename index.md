@@ -15,11 +15,24 @@ data:
     - icon: ':heavy_check_mark:'
       path: src/DataStructure/UnionFind.hpp
       title: UnionFind
+  - name: src/Graph
+    pages:
+    - icon: ':warning:'
+      path: src/Graph/Graph.hpp
+      title: Graph
+    - icon: ':warning:'
+      path: src/Graph/dijkstra.hpp
+      title: dijkstra
   - name: src/Modint
     pages:
     - icon: ':heavy_check_mark:'
       path: src/Modint/StaticModint.hpp
       title: src/Modint/StaticModint.hpp
+  - name: test/Graph
+    pages:
+    - icon: ':warning:'
+      path: test/Graph/dijkstra_Shortest_Path.cpp
+      title: test/Graph/dijkstra_Shortest_Path.cpp
   verificationCategories:
   - name: test/DataStructure
     pages:
