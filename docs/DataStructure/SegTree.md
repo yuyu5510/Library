@@ -11,12 +11,13 @@ documentation_of: ./src/DataStructure/SegTree.hpp
 - 単位元が存在する ($e ・ a = a ・ e = a$)
 以下の2つの条件を満たすものです。
 
-二項演算の計算量が $O(f)$ である時、
+二項演算の計算量が $O(1)$ である時、
 - 要素の $1$ 点更新
 - ある区間 $[l, r)$ に対して演算を適用した結果の取得
 
-を $O(flogN)$ で行うことができます。
+を $O(logN)$ で行うことができます。
 
+二項演算の計算量が $O(f)$ である時は、以下の計算量に $O(f)$ がかかります。
 
 ## コンストラクタ
 1. `SegTree<T> (int N, std::function<T(T, T)> operation, T identity)`
