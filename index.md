@@ -23,6 +23,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: src/Graph/dijkstra.hpp
       title: dijkstra
+  - name: src/Math
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: src/Math/prime.hpp
+      title: Prime
   - name: src/Matrix
     pages:
     - icon: ':warning:'
@@ -53,6 +58,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/Graph/dijkstra_Shortest_Path.test.cpp
       title: test/Graph/dijkstra_Shortest_Path.test.cpp
+  - name: test/Math
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: test/Math/factorize.test.cpp
+      title: test/Math/factorize.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/Math/primality_test.test.cpp
+      title: test/Math/primality_test.test.cpp
 layout: toppage
 ---
 [![Actions Status](https://github.com/yuyu5510/Library/workflows/verify/badge.svg)](https://github.com/yuyu5510/Library/actions) 
