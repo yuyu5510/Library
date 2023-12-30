@@ -3,5 +3,7 @@
 "test/DataStructure/LazySegTree_Range_Affine_Range_Sum.test.cpp": "2023-11-12 20:44:16 +0900",
 "test/DataStructure/SegTree_Point_Add_Range_Sum.test.cpp": "2023-11-12 00:32:16 +0900",
 "test/DataStructure/UnionFind_unionfind.test.cpp": "2023-11-12 00:32:16 +0900",
-"test/Graph/dijkstra_Shortest_Path.test.cpp": "2023-11-13 00:21:55 +0900"
+"test/Graph/dijkstra_Shortest_Path.test.cpp": "2023-11-13 00:21:55 +0900",
+"test/Math/factorize.test.cpp": "2023-12-31 01:11:56 +0900",
+"test/Math/primality_test.test.cpp": "2023-12-31 01:11:56 +0900"
 }
