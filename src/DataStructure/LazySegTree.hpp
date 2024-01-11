@@ -13,7 +13,7 @@ class LazySegTree {
         : LazySegTree(std::vector<T>(N, identity_t), operation, identity_t,
                       mapping, composition, identity_e) {}
 
-    LazySegTree(std::vector<T>& vec, std::function<T(T, T)> operation,
+    LazySegTree(const std::vector<T>& vec, std::function<T(T, T)> operation,
                 T identity_t, std::function<T(E, T)> mapping,
                 std::function<E(E, E)> composition, E identity_e)
         : _N(int(vec.size())),
